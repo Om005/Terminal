@@ -35,7 +35,6 @@ async function dot_func(n, t) {
                     document.querySelector(".file1").click()
                     alert("This file is harmful for your device")
                     playSound('voice.mp3')
-                    playSound('voice.mp3')
                 }
                 break
             }
@@ -61,6 +60,9 @@ async function addText() {
     }
     else {
         await dot_func(statement_num - 1, time)
+        if(statement_num-1==0){
+            alert("This site may cause data leak from your system")            
+        }
         await new Promise(resolve => {
             setTimeout(() => {
                 resolve()
